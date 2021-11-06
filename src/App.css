@@ -7,9 +7,148 @@
 .container {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.9), transparent), url(./images/background-img.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), transparent), url(./images/background-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+}
+
+.first-section {
+  margin-top: 130px;
+}
+
+.first-section .social ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.first-section .social ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.first-section .social ul li a .fab {
+  font-size: 25px;
+  transition: all 0.4s ease-in-out;
+}
+
+.first-section .social ul li a .fab:hover {
+  font-size: 40px;
+  transition: all 0.4s ease-in-out;
+}
+
+.first-section .write-up {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.first-section .write-up .michael {
+  color: crimson;
+}
+
+.first-section .write-up h2:nth-child(1) {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.first-section .write-up h1 {
+  margin-bottom: 30px;
+  height: 40px;
+}
+
+.first-section .write-up .knack {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0px 0px #fff;
+  border-radius: 50%;
+  width: 390px;
+  height: 390px;
+  margin: 20px auto 0 auto;
+}
+
+.image-body {
+  width: 92%;
+  height: 92%;
+  background-image: url("./images/my-pix.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-body:hover {
+  transform: scale(1.07);
+  transition: all 2s ease-in-out;
+}
+
+@media screen and (min-width: 1055px) {
+  .container {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .container {
+    padding: 0 0;
+  }
+
+  .first-section {
+    margin-top: 90px;
+  }
+
+  .first-section .social ul li a .fab {
+    font-size: 20px;
+  }
+
+  .first-section .social ul li a .fab:hover {
+    font-size: 30px;
+  }
+
+  .first-section .write-up h2:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .first-section .write-up h1 {
+    margin-bottom: 20px;
+    /* height: 40px; */
+    font-size: 25px;
+  }
+
+  .first-section .write-up .knack {
+    font-size: 20px;
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first-section {
+    margin-top: 40px;
+  }
 }
