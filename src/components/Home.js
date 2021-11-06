@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactTypical } from '@deadcoder0904/react-typical'
-import About from './About'
 
 function Home() {
     return (
@@ -9,10 +8,10 @@ function Home() {
                 <div className="first-section">
                     <div className="social">
                         <ul>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fab fa-github"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/oluwasegun-michael-akinrinmade-075922148/"><i className="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/Michael0814772"><i className="fab fa-github"></i></a></li>
+                            <li><a href="https://twitter.com/Michael80824373"><i className="fab fa-twitter"></i></a></li>
+                            <li><a href="michael232@gmail.com"><i className="fab fa-google-plus-g"></i></a></li>
                         </ul>
                     </div>
                     <div className="write-up">
@@ -34,14 +33,14 @@ function Home() {
                             ]}
                             />
                         </h1>
-                        <h2 className='knack'>Knack of building applications with front and back end operations.</h2>
+                        <h2 className="knack">Knack of building applications with front and back end operations.</h2>
                     </div>
                 </div>
                 <div className="image">
                     <div className="image-body"></div>
                 </div>
             </div>
-            <About />
+           
         </>
     )
 }
