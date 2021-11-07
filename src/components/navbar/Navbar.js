@@ -15,7 +15,7 @@ function Navbar() {
     const menulList = MenuList.map(({ title, url }, index) => {
         return (
             <li key={index}>
-                <NavLink to={url}>{title}</NavLink>
+                <a href={url}>{title}</a>
             </li>
         )
     })

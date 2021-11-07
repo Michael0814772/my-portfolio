@@ -1,5 +1,6 @@
 import React from 'react';
-import { ReactTypical } from '@deadcoder0904/react-typical'
+import { ReactTypical } from '@deadcoder0904/react-typical';
+import About from './About';
 
 function Home() {
     return (
@@ -18,19 +19,19 @@ function Home() {
                         <h2>Hello, I'M <font className='michael'>Michael</font></h2>
                         <h1>
                             <ReactTypical
-                            loop={Infinity}
-                            steps={[
-                                "Frontend React Developer",
-                                1000,
-                                "Ethusiastiv Dev",
-                                1000,
-                                "Frontend Developer",
-                                1000,
-                                "Web App Developer",
-                                1000,
-                                "Frontend React Engineer",
-                                1000,
-                            ]}
+                                loop={Infinity}
+                                steps={[
+                                    "Frontend React Developer",
+                                    1000,
+                                    "Ethusiastic Developer",
+                                    1000,
+                                    "Frontend Developer",
+                                    1000,
+                                    "Web App Developer",
+                                    1000,
+                                    "Frontend React Engineer",
+                                    1000,
+                                ]}
                             />
                         </h1>
                         <h2 className="knack">Knack of building applications with front and back end operations.</h2>
@@ -40,7 +41,7 @@ function Home() {
                     <div className="image-body"></div>
                 </div>
             </div>
-           
+            <About />
         </>
     )
 }
