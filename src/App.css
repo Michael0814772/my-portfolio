@@ -1,4 +1,4 @@
-* {
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,8 +18,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: auto;
-  margin-top: 100px;
   height: 100vh;
+  margin-top: 100px;
 }
 
 .first-section {
@@ -108,7 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 50px auto;
+  margin: auto auto 50px auto;
 }
 
 .header .header-span {
@@ -124,6 +124,11 @@
 
 .about {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 .about-body {
@@ -179,34 +184,243 @@
   left: -25px;
 }
 
+/**************** Work *****************/
+.work {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
-@media screen and (max-width: 1300px) {
-  .about-body .first-row p{
-    line-height: 20px;
-    font-size: 15px;
+.work .work-header {
+  display: flex;
+  color: #fff;
+}
+
+.work-header span {
+  width: 350px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 auto 20px;
+}
+
+.work-body {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0 auto;
+  width: 70%;
+}
+
+.body-tabs .tab {
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid rgba(255, 3, 3, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.tab:hover {
+  background-color: rgb(35, 12, 53);
+  border-left: 1px solid red;
+}
+ 
+.tab.active {
+  background-color: rgb(35, 12, 53);
+  border-left: 1px solid red;
+}
+
+.work-experience {
+  margin-left: 50px;
+}
+
+.work-experience .experience {
+  display: none;
+  width: 355px;
+  height: 457px;
+}
+
+.work-experience .active-experience {
+  display: block;
+}
+
+.work-experience .experience h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.work-experience .experience p {
+  margin-bottom: 20px;
+}
+
+.work-experience .experience ul{
+  list-style: none;
+}
+
+.work-experience .experience ul li {
+  line-height: 20px;
+  margin-bottom: 5px;
+  margin-left: 25px;
+  width: 100%;
+  position: relative;
+}
+
+.work-experience .experience ul li::before {
+  content: "▹ ";
+  position: absolute;
+  left: 0px;
+  margin-left: -25px;
+}
+
+
+
+
+
+@media screen and (max-width: 320px) {
+  .about {
+    margin-bottom: 350px!important;
+  }
+  .about .header{
+    margin-top: 60px;
+  }
+
+  .about .header span {
+    width: 100px;
   }
 }
 
-@media screen and (max-width: 1060px) {
-  .about-body .first-row p{
-    line-height: 20px;
-    font-size: 15px;
+@media screen and (max-width: 400px) {
+  .about-body .first-row-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-body .first-row-2 ul {
+    margin-top: 10px;
   }
 
-  .about-body .first-row ul{
-    font-size: 15px;
+  .first-row-2 .row-1 {
+    margin-top: 10px;
+  }
+
+  .first-row-2 .row-2 {
+    margin-top: -50px;
   }
 
   .about {
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-top: 250px;
+    margin-bottom: 250px;
+  }  
+
+  .work .work-body .body-tabs .tab {
+    font-size: 10px;
+  }
+
+  .work .work-experience h1{
+    font-size: 17px;
+  }
+
+  .work .work-experience p{
+    font-size: 14px;
+  }
+
+  .work .work-experience ul li {
+    font-size: 15px;
+    padding-right: 10px;
   }
 }
 
+@media screen and (max-width: 500px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
 
-@media screen and (min-width: 1055px) {
-  .container {
-    padding: 10px 15%;
+  .first-section {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .about .header h1 {
+    font-size: 25px;
+  }
+
+  .header .header-span {
+    width: 200px;
+  }
+
+  .about-body {
+    width: 95%;
+  }
+
+  .about-body .first-row ul {
+    margin-left: 10px;
+  }
+
+  .work {
+    margin-top: 130px;
+  }
+
+  .work-body {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .work .body-tabs {
+    display: inline-flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .body-tabs .tab {
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 3, 3, 0.274);
+  }
+
+  .work-experience {
+    margin-left: 10px;
+  }
+
+  .work-experience .experience {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .about-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .about .second-row {
+    margin-top: 100px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .work .work-header h1 {
+    font-size: 20px;
+  }
+
+  .work .work-header span {
+    width: 100px;
   }
 }
 
@@ -252,67 +466,32 @@
   }
 }
 
-@media screen and (max-width: 630px) {
-  .about-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-
-  .about .second-row {
-    margin-top: 100px;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-
-  .about .header h1 {
-    font-size: 25px;
-  }
-
-  .header .header-span {
-    width: 200px;
-  }
-
-  .about-body {
-    width: 95%;
-  }
-
-  .about-body .first-row ul {
-    margin-left: 10px;
+@media screen and (min-width: 1055px) {
+  .container {
+    padding: 10px 15%;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .home {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 1060px) {
+  .about-body .first-row p{
+    line-height: 20px;
+    font-size: 15px;
   }
 
-  .first-section {
-    margin-top: 40px;
+  .about-body .first-row ul{
+    font-size: 15px;
+  }
+
+  .about {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
-@media screen and (max-width: 380px) {
-  .about-body .first-row-2 {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 1300px) {
+  .about-body .first-row p{
+    line-height: 20px;
+    font-size: 15px;
   }
-  
-  .about-body .first-row-2 ul {
-    margin-top: 10px;
-  }
-
-  .first-row-2 .row-1 {
-    margin-top: 10px;
-  }
-
-  .first-row-2 .row-2 {
-    margin-top: -50px;
-  }
-  
 }
+

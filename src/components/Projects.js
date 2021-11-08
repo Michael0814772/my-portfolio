@@ -2,11 +2,13 @@ import React from 'react'
 
 function Projects() {
     return (
-        <div>
-            <h1 className="testing">
-                Projects
-            </h1>
-        </div>
+        <>
+            <div className="projects" id="projects">
+                <h1 className="testing">
+                    Projects
+                </h1>
+            </div>
+        </>
     )
 }
 

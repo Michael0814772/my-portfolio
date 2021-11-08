@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactTypical } from '@deadcoder0904/react-typical';
 import About from './About';
+import Work from './Work';
 
 function Home() {
     return (
@@ -42,6 +43,7 @@ function Home() {
                 </div>
             </div>
             <About />
+            <Work />
         </>
     )
 }

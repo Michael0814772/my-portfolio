@@ -8,6 +8,10 @@ export const MenuList = [
         url: '#about'
     },
     {
+        title: 'Work',
+        url: '#work'
+    },
+    {
         title: 'Projects',
         url: '#projects'
     },
